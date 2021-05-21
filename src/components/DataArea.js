@@ -37,6 +37,7 @@ export default class DataArea extends Component {
 
 
         const compareFnc = (a, b) => {
+            // if no values
             if (this.state.order === "ascend") {
                 if (a[heading] === undefined) {
                     return 1;
@@ -71,8 +72,8 @@ export default class DataArea extends Component {
 
     }
 
-    handleSearchChange = event => {
-        console.log(event.target.value);
+    handleNewSearch = event => {
+        // console.log(event.target.value);
         const filter = event.target.value;
         const filteredList = this.state.users.filter(item => {
             let values = Object.values(item)
@@ -98,7 +99,7 @@ export default class DataArea extends Component {
         return(
             <div>
 
-                <Nav handleSearchChange={this.handleSearchChange} />
+                <Nav handleNewSearch={this.handleNewSearch} />
                 <div className="data-area">
                     <DataTable headings={this.headings} users={this.state.filteredUsers} handleSort={this.handleSort} />
                 </div>
