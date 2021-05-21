@@ -6,7 +6,7 @@ export default class DataArea extends Component {
 
     state = {
         users:[{}],
-        order: "descend"
+        order: "descend",
         filteredUsers: [{}]
     }
 
@@ -19,4 +19,38 @@ export default class DataArea extends Component {
         {name: "DOB", width: "10"}
 
     ]
+
+
+    handleSort = heading => {
+        if(this.state.order === "descend") {
+            this.setState({
+                order:"ascend"
+            })
+        }else {
+            this.setState({
+                order: "descend"
+            })
+        }
+
+
+        const compareFnc = (a, b) => {
+            if (this.state.order === "ascend") {
+                if (a[heading] === undefined) {
+                    return 1;
+                }else if (b[heading] === undefined) {
+                    return -1;
+                }
+
+                else if (heading === "name") {
+                    return a[heading].first.localCompare(b[heading].first);
+                } else {
+                    return a[heading] - b[heading];
+                }
+            }
+        }
+
+
+        const 
+    }
+
 }
