@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
+import Nav from './Nav';
+import DataTable from './DataTable';
 
 
 
@@ -92,5 +94,16 @@ export default class DataArea extends Component {
     }
 
 
-    
+    render () {
+        return(
+            <div>
+
+                <Nav handleSearchChange={this.handleSearchChange} />
+                <div className="data-area">
+                    <DataTable headings={this.headings} users={this.state.filteredUsers} handleSort={this.handleSort} />
+                </div>
+
+            </div>
+        )
+    }
 }
