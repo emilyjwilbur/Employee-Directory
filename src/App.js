@@ -1,15 +1,15 @@
-import logo from './logo.svg';
-import Body from './components/Body';
+import React from 'react';
 import Main from './components/Main';
-import Wrapper from "./components/Wrapper";
-import Header from "./components/Header";
+
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <Body />
-    </div>
+     <div className="App">
+       <Main />
+       
+      
+       
+     </div>
   );
 }
 
