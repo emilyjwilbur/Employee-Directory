@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
 import Nav from './Nav';
-// import DataTable from './DataTable';
+import DataTable from './DataTable';
 
 
 
@@ -73,7 +73,7 @@ export default class DataArea extends Component {
     }
 
     handleNewSearch = event => {
-        console.log(event.target.value);
+        // console.log(event.target.value);
         const filter = event.target.value;
         const filteredList = this.state.users.filter(item => {
             let values = Object.values(item)
@@ -102,7 +102,7 @@ export default class DataArea extends Component {
 
                 <Nav handleNewSearch={this.handleNewSearch} />
                 <div className="data-area">
-                    {/* <DataTable headings={this.headings} users={this.state.filteredUsers} handleSort={this.handleSort} /> */}
+                    <DataTable headings={this.headings} users={this.state.filteredUsers} handleSort={this.handleSort} />
                 </div>
 
             </div>

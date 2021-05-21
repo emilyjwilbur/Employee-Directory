@@ -3,8 +3,8 @@ import React from "react";
 
 function SearchBox({ handleSearchChange }){
     return (
-        <div className="search-box col-6" style={{ padding: 15, textAlign: "center",  }} >
-            <form className="form-inline" >
+        <div className="search-box col-6" style={{ padding: 15, textAlign: "center" }} >
+            <form className="form-inline">
                 <input className="form-control"
                     type="search"
                     placeholder="Search"
