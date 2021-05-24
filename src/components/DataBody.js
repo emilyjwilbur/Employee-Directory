@@ -40,7 +40,7 @@ return formattedDate;
                                 </a>
                             </td>
                             <td data-th="DOB" className="align-middle">
-                                {formatDate(dob.date)}
+                                {dob.date}
                             </td>
                         </tr>
                     );
